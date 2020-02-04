@@ -2,7 +2,6 @@
 https://functional.christmas/2019/23
 
 ### TODO
-- Understand `hpack`
 - Explore more language options like `{-# LANGUAGE OverloadedStrings #-}`
 - What are the differences between the followings
 ```
@@ -33,3 +32,9 @@ Another file important to the build is `package.yaml`. Since Stack 1.6.1, the `p
 #### Reference
 - https://docs.haskellstack.org/en/stable/README/
 - https://docs.haskellstack.org/en/stable/GUIDE/
+
+### hpack
+Hpack is a format for Haskell packages. It is a modern alternative to the Cabal package format and follows different design principles.
+
+#### Reference
+https://github.com/sol/hpack#readme

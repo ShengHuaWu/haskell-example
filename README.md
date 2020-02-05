@@ -4,6 +4,7 @@ https://functional.christmas/2019/23
 ### TODO
 - Explore more language options like `{-# LANGUAGE OverloadedStrings #-}`
 - What are the differences between the followings
+- Figure out `Data.Aeson.Lens`. (https://www.snoyman.com/blog/2017/05/playing-with-lens-aeson)
 ```
 import Network.HTTP.Simple (httpBS, getResponseBody)
 import qualified Data.ByteString.Char8 as BS

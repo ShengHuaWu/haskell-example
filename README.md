@@ -2,13 +2,12 @@
 https://functional.christmas/2019/23
 
 ### TODO
-- Explore more language options like `{-# LANGUAGE OverloadedStrings #-}`
 - What are the differences between the followings
-- Figure out `Data.Aeson.Lens`. (https://www.snoyman.com/blog/2017/05/playing-with-lens-aeson)
 ```
 import Network.HTTP.Simple (httpBS, getResponseBody)
 import qualified Data.ByteString.Char8 as BS
 ```
+- Figure out `Data.Aeson.Lens`. (https://www.snoyman.com/blog/2017/05/playing-with-lens-aeson)
 - Read more about `lenses`
 
 ### Stack
@@ -39,3 +38,9 @@ Hpack is a format for Haskell packages. It is a modern alternative to the Cabal 
 
 #### Reference
 https://github.com/sol/hpack#readme
+
+### Language Options
+As with all known Haskell systems, GHC implements some extensions to the standard Haskell language. They can all be enabled or disabled by command line flags or language pragmas. By default GHC understands the most recent Haskell version it supports, plus a handful of extensions.
+
+#### Reference
+https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html

@@ -2,11 +2,6 @@
 https://functional.christmas/2019/23
 
 ### TODO
-- What are the differences between the followings
-```
-import Network.HTTP.Simple (httpBS, getResponseBody)
-import qualified Data.ByteString.Char8 as BS
-```
 - Figure out `Data.Aeson.Lens`. (https://www.snoyman.com/blog/2017/05/playing-with-lens-aeson)
 - Read more about `lenses`
 
@@ -44,3 +39,23 @@ As with all known Haskell systems, GHC implements some extensions to the standar
 
 #### Reference
 https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html
+
+### Imports
+```Haskell
+Import command	                    What is brought into scope	                    Notes
+--
+import Mod	                        x, y, z, (+++), Mod.x, Mod.y, Mod.z, (Mod.+++)	(By default, qualified and unqualified names.)
+import Mod ()	                    (Nothing!)	                                    (Useful for only importing instances of typeclasses and nothing else)
+import Mod (x,y, (+++))	            x, y, (+++), Mod.x, Mod.y, (Mod.+++)	        (Only x, y, and (+++), no z.)
+import qualified Mod	            Mod.x, Mod.y, Mod.z, (Mod.+++)	                (Only qualified versions; no unqualified versions.)
+import qualified Mod (x,y)	        Mod.x, Mod.y	                                (Only x and y, only qualified.)
+import Mod hiding (x,y,(+++))	    z, Mod.z	                                    (x and y are hidden.)
+import qualified Mod hiding (x,y)	Mod.z, (Mod.+++)	                            (x and y are hidden.)
+import Mod as Foo	                x, y, z, (+++), Foo.x, Foo.y, Foo.z, (Foo.+++)	(Unqualified names as before. Qualified names use Foo instead of Mod.)
+import Mod as Foo (x,y)	            x, y, Foo.x, Foo.y	                            (Only import x and y.)
+import qualified Mod as Foo	        Foo.x, Foo.y, Foo.z, (Foo.+++)	                (Only qualified names, using new qualifier.)
+import qualified Mod as Foo (x,y)	Foo.x, Foo.y	                                (Only qualified versions of x and y, using new qualifier)
+```
+
+### Reference
+https://wiki.haskell.org/Import
